@@ -62,8 +62,26 @@ nav#menu li {
     background-color: #dddddd;
     padding: 10px;  /*Cria um espaço entre a letra e o fundo(cinza); ESPAÇO DENTRO DO OBJETO*/
     margin: 2px; /*Cria um espaço fora do objeto, entre os objetos(Opções do menu)*/
+    transition: background-color 1s;
 }
 
 nav#menu h1{
     display: none;   /*Vai fazer com que o título principal desapareça do site, mas ele ainda vai está lá, pois vai fazer muita diferença pros mecanismos de buscas*/
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+
+}
+
+nav#menu a{
+    text-decoration: none;
+    color: #000000;
+    transition: color 1s;
+    
+}
+
+nav#menu a:hover{
+    color:#ffffff;
+    text-decoration: underline;
 }
