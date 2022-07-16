@@ -1,14 +1,58 @@
 @charset "utf-8";
 
 body {
-    background-color:white;
+    background-color:#dddddd;
     color:rgb(0, 0, 0)
 }
+
+
+div#interface {  /*A tag NAV tem posição ABSOLUTE, então não fica dentro da DIV, ela fica em uma posição ABSOLUTA, a posição que eu definir*/
+    width:900px;
+    background-color: white;
+    margin: -10px auto 10px auto;  /*A ORDEM DOS PARÂMETROS É 1º CIMA, 2º DIREITA, 3º BAIXO, 4º ESQUERDA.*/
+    box-shadow:0px 0px 10px rgba(0,0,0, 0.5); /*Cria uma sombra em volta do objeto; O 1º PARÂMETRO é deslocamento lateral, o 2º é deslocamento vertical,
+    o terceiro é espalhamento da sombra e o 4º é a cor*/
+    padding: 10px 10px 10px 10px; /*SE MEU padding FOR IGUAL PARA TODOS OS PARÂMETROS(CIMA, DIREITA, BAIXO, ESQUERDA),
+    então eu posso informar apenas um valor que o navegador compreenderá que eu quero esse valor para todos os lados.*/
+}
+
+
 
 p {
 text-align: justify;
 text-indent: 50px;
 }
+
+header#cabecalho img#icone{
+    position: absolute;  /*DESSA FORMA CONSIGO FAZER COM QUE A IMAGEM FLUTUE POR ONDE EU QUISER.*/
+    left: 780px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 70px; /*COMO A IMAGEM É MUITO PEQUENA, ELE ACABA REPETINDO ELA PRA COMPLETAR TODO O BACKGROUND DO CABECALHO, POR ISSO USO O no-repeat, PRA Q NÃO HAJA REPETIÇAO.*/
+}
+
+header#cabecalho h1{
+    font-family: arial, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: Arial, sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px
+}
+
+
 
 /* Formatação de imagens com legendas  */
 figure.foto-legenda {
@@ -74,14 +118,16 @@ nav#menu li:hover {
 
 }
 
-nav#menu a{
+nav#menu a {
     text-decoration: none;
     color: #000000;
     transition: color 1s;
     
 }
 
-nav#menu a:hover{
+nav#menu a:hover {
     color:#ffffff;
     text-decoration: underline;
 }
+
+
