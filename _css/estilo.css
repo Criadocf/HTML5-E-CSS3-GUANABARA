@@ -1,0 +1,198 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Titillium+Web&display=swap');
+@font-face {
+    font-family:'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    background-color:#dddddd;
+    color:rgb(0, 0, 0)
+}
+
+
+div#interface {  /*A tag NAV tem posição ABSOLUTE, então não fica dentro da DIV, ela fica em uma posição ABSOLUTA, a posição que eu definir*/
+    width:900px;
+    background-color: white;
+    margin: -10px auto 10px auto;  /*A ORDEM DOS PARÂMETROS É 1º CIMA, 2º DIREITA, 3º BAIXO, 4º ESQUERDA.*/
+    box-shadow:0px 0px 10px rgba(0,0,0, 0.5); /*Cria uma sombra em volta do objeto; O 1º PARÂMETRO é deslocamento lateral, o 2º é deslocamento vertical,
+    o terceiro é espalhamento da sombra e o 4º é a cor*/
+    padding: 10px 10px 10px 10px; /*SE MEU padding FOR IGUAL PARA TODOS OS PARÂMETROS(CIMA, DIREITA, BAIXO, ESQUERDA),
+    então eu posso informar apenas um valor que o navegador compreenderá que eu quero esse valor para todos os lados.*/
+}
+
+
+
+p {
+text-align: justify;
+text-indent: 50px;
+}
+
+header#cabecalho img#icone{
+    position: absolute;  /*DESSA FORMA CONSIGO FAZER COM QUE A IMAGEM FLUTUE POR ONDE EU QUISER.*/
+    left: 780px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 70px; /*COMO A IMAGEM É MUITO PEQUENA, ELE ACABA REPETINDO ELA PRA COMPLETAR TODO O BACKGROUND DO CABECALHO, POR ISSO USO O no-repeat, PRA Q NÃO HAJA REPETIÇAO.*/
+}
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px
+}
+
+
+
+/* Formatação de imagens com legendas  */
+figure.foto-legenda {
+    position: relative;
+    border: 5px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    transition: opacity 1s;  /* o primeiro parâmetro da 'transition' é o que eu quero fazer a transição, nesse caso é o opacity, e o segundo parâmetro é o tempo dessa transição, no caso, 1 s. */
+}
+
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+
+
+/* Formatação do menu do site*/
+nav#menu {
+    display: block;  /*primeira coisa q tenho q fazer pra que meu Menu flutue na tela.*/
+}
+
+
+nav#menu ul {
+    list-style: none;    /* Tira os marcadores da lista*/
+    text-transform: uppercase;
+    position: absolute;  /*Permite a minha lista flutue por qualquer parte do site, se eu botar RELATIVE, ele vai ser posicionado, apenas dentro do nav; Com a posição ABSOLUTA, eu posso configurar o TOP e o LEFT*/
+    top: -20px; /*Diz qual a distância q esse bloco vai ficar do topo da página*/
+    left: 350px; /*Diz a distãncia que esse bloco vai ficar da margem esquerda*/
+}
+
+
+nav#menu li {
+    display: inline-block;  /*Deixa as opções do menu, lado a lado*/
+    background-color: #dddddd;
+    padding: 10px;  /*Cria um espaço entre a letra e o fundo(cinza); ESPAÇO DENTRO DO OBJETO*/
+    margin: 2px; /*Cria um espaço fora do objeto, entre os objetos(Opções do menu)*/
+    transition: background-color 1s;
+}
+
+nav#menu h1{
+    display: none;   /*Vai fazer com que o título principal desapareça do site, mas ele ainda vai está lá, pois vai fazer muita diferença pros mecanismos de buscas*/
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+
+}
+
+nav#menu a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 1s;
+    
+}
+
+nav#menu a:hover {
+    color:#ffffff;
+    text-decoration: underline;
+}
+
+section#corpo {
+    display: block;
+    width:520px;
+    float: left;    /*VAI FLUTUAR PELA ESQUERDA*/ 
+    border-right: #606060 solid 1px;
+    padding-right: 15px;
+}
+
+table#tabelaspec {
+    border:rgb(0, 0, 0) solid 1px;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: #606060 solid 1px;
+    padding: 10px; /*espaço entre o conteudo e as linhas das bordas da tabela*/
+    text-align: right;
+}
+
+table#tabelaspec td.ce{
+    background-color: #606060;
+    color:#ffffff;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+    display:block;
+    float:right;
+    font-size: 8pt;
+    color: #000000;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block; /*MOSTRADOS EM BLOCO*/
+    float: right; /*Para usar o float, devemos estar com os objetos configurados par serem mostrados em bloco, só assim flutuarao um do lado do outro // VAI FLUTUAR PELA DIREITA*/
+    width: 350px;
+}
+
+footer#rodape{
+    clear:both; /*USO O clear:both PARA LIMPAR A CONFIGURAÇÃO DOS DOIS LADOS(aside E footer) */
+    border-top: #606060 solid 1px;
+    text-align:center;
+
+}
+
+
+

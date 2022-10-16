@@ -1,0 +1,70 @@
+.negrito{
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-size:40px;
+}
+
+body{
+    background-image:url("amadeirado.jpg");
+}
+
+nav#tabela ul{
+    text-transform: uppercase;
+    position: absolute;
+    left: 350px;
+    top: -10px;
+}
+
+nav#tabela li{
+    list-style: none;
+    display: inline-block;
+    background-color: rgb(54, 47, 47);
+    color: rgb(194, 11, 11);
+    padding: 5px;
+    margin: 5px;
+}
+
+
+
+table{
+    border-collapse: unset;
+    width: 80%;
+    left: 43%;
+    margin-top: 10px;
+    position: relative;
+}
+
+th, td{
+    border-radius: 30px;
+    padding:10px;
+}
+
+th{
+    background-color: blue; 
+    border-radius: 30px;
+}
+
+tr{
+    background-color: aqua;
+    border-radius: 30px;
+}
+
+td {
+    text-align: center;
+}
+
+img{
+    box-shadow: 2px 1px 3px black;
+    position: absolute;
+    left: 40%;
+}
+
+.posicao{
+    position: absolute;
+    margin-top: 100px;
+}
+
+
+
