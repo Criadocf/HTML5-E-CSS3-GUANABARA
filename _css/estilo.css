@@ -7,7 +7,8 @@
 
 body {
     background-color:#dddddd;
-    color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
 }
 
 
@@ -27,6 +28,16 @@ p {
 text-align: justify;
 text-indent: 50px;
 }
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 header#cabecalho img#icone{
     position: absolute;  /*DESSA FORMA CONSIGO FAZER COM QUE A IMAGEM FLUTUE POR ONDE EU QUISER.*/
@@ -137,7 +148,7 @@ nav#menu a:hover {
 
 section#corpo {
     display: block;
-    width:520px;
+    width:500px;
     float: left;    /*VAI FLUTUAR PELA ESQUERDA*/ 
     border-right: #606060 solid 1px;
     padding-right: 15px;
@@ -185,6 +196,24 @@ aside#lateral {
     display: block; /*MOSTRADOS EM BLOCO*/
     float: right; /*Para usar o float, devemos estar com os objetos configurados par serem mostrados em bloco, só assim flutuarao um do lado do outro // VAI FLUTUAR PELA DIREITA*/
     width: 350px;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0, .5);
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
 }
 
 footer#rodape{
@@ -192,6 +221,38 @@ footer#rodape{
     border-top: #606060 solid 1px;
     text-align:center;
 
+}
+
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin:10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12px;
+    color: #606060;
+}
+
+.direita{
+    text-align: end; /*Poderia usar o valor 'rigth'*/
 }
 
 
